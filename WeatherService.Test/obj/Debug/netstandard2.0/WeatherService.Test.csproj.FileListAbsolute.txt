@@ -1,0 +1,5 @@
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService.Test\bin\Debug\netstandard2.0\WeatherService.dll
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService.Test\obj\Debug\netstandard2.0\WeatherService.Test.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService.Test\obj\Debug\netstandard2.0\WeatherService.Test.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService.Test\obj\Debug\netstandard2.0\WeatherService.Test.AssemblyInfoInputs.cache
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService.Test\obj\Debug\netstandard2.0\WeatherService.Test.AssemblyInfo.cs
