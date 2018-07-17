@@ -15,21 +15,39 @@ namespace Name
     {
         public IEnumerable<CityAveragedWeatherData> AggregateWeatherData(WeatherData[] inputData)
         {
-            Dictionary<String, Tuple<decimal, decimal, int>> temps = new Dictionary<string, Tuple<decimal, decimal, int>>();
+            Dictionary<String, AggregateTemp> temps = new Dictionary<string, AggregateTemp>();
             foreach(WeatherData datum in inputData)
             {
                 String name = GetName(datum);
                 if(!temps.ContainsKey(name))
                 {
-                    temps.Add(name, new Tuple<decimal, decimal, int>(datum.HighTemp, datum.LowTemp, 1));
+                    temps.Add(name, new AggregateTemp() {
+                        HighTemp = datum.HighTemp,
+                        LowTemp = datum.LowTemp,
+                        SampleCount = 1
+                    });
                 } else
                 {
-                    temps[name].+= datum.HighTemp;
-                    temps[name].Item2 += datum.LowTemp;
-                    temps[name].Item3++;
+                    temps[name].HighTemp += datum.HighTemp;
+                    temps[name].LowTemp += datum.LowTemp;
+                    temps[name].SampleCount++;
                 }
             }
 
+            List<CityAveragedWeatherData> results = new List<CityAveragedWeatherData>();
+            foreach(KeyValuePair<String, AggregateTemp> kvp in temps)
+            {
+                String[] names = SplitName(kvp.Key);
+                CityAveragedWeatherData cityData = new CityAveragedWeatherData()
+                {
+                    State = names[0],
+                    City = names[1],
+                    AverageHighTemp = kvp.Value.HighTemp / kvp.Value.SampleCount,
+                    AverageLowTemp = kvp.Value.LowTemp / kvp.Value.SampleCount
+                };
+                results.Add(cityData);
+            }
+            return results;
         }
 
         private String GetName(WeatherData datum)
@@ -42,7 +60,7 @@ namespace Name
             return name.Split(';');
         }
 
-        private class TempAggregate
+        private class AggregateTemp
         {
             public decimal HighTemp { get; set; }
             public decimal LowTemp { get; set; }
