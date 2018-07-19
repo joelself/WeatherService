@@ -16,17 +16,19 @@ namespace Name
         public IEnumerable<CityAveragedWeatherData> AggregateWeatherData(WeatherData[] inputData)
         {
             Dictionary<String, AggregateTemp> temps = new Dictionary<string, AggregateTemp>();
-            foreach(WeatherData datum in inputData)
+            foreach (WeatherData datum in inputData)
             {
                 String name = GetName(datum);
-                if(!temps.ContainsKey(name))
+                if (!temps.ContainsKey(name))
                 {
-                    temps.Add(name, new AggregateTemp() {
+                    temps.Add(name, new AggregateTemp()
+                    {
                         HighTemp = datum.HighTemp,
                         LowTemp = datum.LowTemp,
                         SampleCount = 1
                     });
-                } else
+                }
+                else
                 {
                     temps[name].HighTemp += datum.HighTemp;
                     temps[name].LowTemp += datum.LowTemp;
@@ -35,7 +37,7 @@ namespace Name
             }
 
             List<CityAveragedWeatherData> results = new List<CityAveragedWeatherData>();
-            foreach(KeyValuePair<String, AggregateTemp> kvp in temps)
+            foreach (KeyValuePair<String, AggregateTemp> kvp in temps)
             {
                 String[] names = SplitName(kvp.Key);
                 CityAveragedWeatherData cityData = new CityAveragedWeatherData()
@@ -83,5 +85,16 @@ namespace Name
         public string City { get; set; }
         public decimal AverageHighTemp { get; set; }
         public decimal AverageLowTemp { get; set; }
+
+        public override bool Equals(Object obj)
+        {
+            // Check for null values and compare run-time types.
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            CityAveragedWeatherData other = (CityAveragedWeatherData)obj;
+            return State == other.State && City == other.City &&
+                AverageHighTemp == other.AverageHighTemp && AverageLowTemp == other.AverageLowTemp;
+        }
     }
 }

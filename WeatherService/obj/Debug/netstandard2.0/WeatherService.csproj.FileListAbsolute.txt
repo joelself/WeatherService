@@ -1,9 +1,0 @@
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\bin\Debug\netstandard2.0\WeatherService.deps.json
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\bin\Debug\netstandard2.0\WeatherService.dll
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\bin\Debug\netstandard2.0\WeatherService.pdb
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.csprojResolveAssemblyReference.cache
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.csproj.CoreCompileInputs.cache
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.AssemblyInfoInputs.cache
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.AssemblyInfo.cs
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.dll
-C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\netstandard2.0\WeatherService.pdb

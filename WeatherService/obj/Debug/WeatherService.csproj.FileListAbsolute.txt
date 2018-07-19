@@ -1,0 +1,6 @@
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\bin\Debug\WeatherService.dll
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\bin\Debug\WeatherService.pdb
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\WeatherService.csprojAssemblyReference.cache
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\WeatherService.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\WeatherService.dll
+C:\Users\Joel\Documents\Visual Studio 2017\Projects\WeatherService\WeatherService\obj\Debug\WeatherService.pdb
